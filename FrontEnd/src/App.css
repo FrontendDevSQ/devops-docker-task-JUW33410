@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  background-color: black
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+ 
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+ 
+}
+
+main .left {
+  background-color: #1e1e1e;
+  position: relative;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+}
+
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219, 219, 255);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+}
+
+
+/* Improve visibility without removing syntax highlighting */
+
+.right pre,
+.right code {
+  color: inherit !important;
+  background-color: transparent !important;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-left: 1.2rem;
+}
+
+/* Optional: Make sure background is dark, text is readable */
+.right {
+  background-color: #1e1e1e;
+  color: hsla(0, 0%, 100%, 0.721);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow: auto;
+}
+
+/* Code Editor Text - White without breaking highlighting */
+.code pre,
+.code pre code {
+  color: #efa166 ; /* base white text */
+  background-color: transparent;
+}
+
+/* PrismJS override - keep highlighting intact */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #efa166  !important;
+}
+
+.token.punctuation {
+  color: #efa166  !important;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #efa166 !important;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #efa166  !important;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+  color: #e6c474 !important;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #efa166 !important;
+}
+
+.token.keyword {
+  color: rgba(186, 38, 249, 0.604)2!important;
+}
+
+.review {
+  background-color: #282c34;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
